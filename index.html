@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clicks</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a id="logo" class="logo" href="index.html">{CB}</a>
+            <nav>
+                <ul>
+                    <li class="nav-links"><a class="menu active-menu" href="index.html">Home</a></li>
+                    <li class="nav-links"><a class="menu" href="gallery.html">Gallery</a></li>
+                    <li class="nav-links"><a class="menu" href="#">Contact</a></li>
+                    <li class="nav-links"><a class="menu" href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <div class="text-box">
+                    <h3 id="text">Chinmoy<br>Biswas<br>Photography</h3>
+                </div>
+                <img src="img/angle-left-solid.svg" class="small-icon1">
+                <img src="img/hat-cowboy-solid.svg" class="small-icon3">
+                <img src="img/square-regular.svg" class="small-icon2">
+            </div>
+            <div class="col-2">
+               <div class="gallery-box">
+                   <img src="img/img (1).jpg" id="gallery">
+                   <ul>
+                       <li class="btn active">1</li>
+                       <li class="btn">2</li>
+                       <li class="btn">3</li>
+                       <li class="btn">4</li>
+                       <li class="btn">5</li>
+                   </ul>
+               </div>
+            </div>  
+        </div>
+
+        <img src="img/circle-notch-solid.svg" class="small-icon4">
+        <img src="img/circle-notch-solid.svg" class="small-icon5">
+
+    </div>
+    <div id="cursor"></div>
+
+<script>
+    var cursor = document.getElementById("cursor");
+    
+    document.onmousemove = function(e){
+        cursor.style.left = (e.pageX -25) + "px";
+        cursor.style.top = (e.pageY -25) + "px";
+        cursor.style.display = "block";
+    }
+</script>
+
+<script>
+
+    var btn = document.getElementsByClassName("btn");
+    var gallery = document.getElementById("gallery");
+
+    var images = new Array (
+        "img/img (1).jpg",
+        "img/img (2).jpg",
+        "img/img (3).jpg",
+        "img/img (4).jpg",
+        "img/img (5).jpg"
+    );
+
+    for ( let i=0; i < btn.length; i++) {
+        btn[i].onclick = function ()
+        {
+            gallery.src = images[i];
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += " active";
+        };
+    }
+
+</script>
+</body>
+</html>

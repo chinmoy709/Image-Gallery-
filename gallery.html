@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clicks</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a id="logo" class="logo" href="index.html">{CB}</a>
+            <nav>
+                <ul>
+                    <li class="nav-links"><a class="" href="index.html">Home</a></li>
+                    <li class="nav-links"><a class="active-menu" href="gallery.html">Gallery</a></li>
+                    <li class="nav-links"><a class="" href="#">Contact</a></li>
+                    <li class="nav-links"><a class="" href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper">
+            <nav>
+                <div class="items">
+                    <span class="item active">All</span>
+                    <span class="item">Nature</span>
+                    <span class="item">Potrait</span>
+                    <span class="item">Night</span>
+                    <span class="item">Mobile</span>
+                    <span class="item">Selfie</span>
+                </div>
+            </nav>
+            <!------------ filter-image---------- -->
+            <div class="gallery">
+                <div class="image"><span><img src="img/img (1).jpg"></span></div>
+                <div class="image"><span><img src="img/img (2).jpg"></span></div>
+                <div class="image"><span><img src="img/img (3).jpg"></span></div>
+                <div class="image"><span><img src="img/img (4).jpg"></span></div>
+                <div class="image"><span><img src="img/img (5).jpg"></span></div>
+                <div class="image"><span><img src="img/img (6).jpg"></span></div>
+                <div class="image"><span><img src="img/img (7).jpg"></span></div>
+                <div class="image"><span><img src="img/img (8).jpg"></span></div>
+                <div class="image"><span><img src="img/img (9).jpg"></span></div>
+                <div class="image"><span><img src="img/img (10).jpg"></span></div>
+                <div class="image"><span><img src="img/img (11).jpg"></span></div>
+                <div class="image"><span><img src="img/img (12).jpg"></span></div>
+                <div class="image"><span><img src="img/img (13).jpg"></span></div>
+                <div class="image"><span><img src="img/img (14).jpg"></span></div>
+                <div class="image"><span><img src="img/img (15).jpg"></span></div>
+                <div class="image"><span><img src="img/img (16).jpg"></span></div>
+                <div class="image"><span><img src="img/img (17).jpg"></span></div>
+                <div class="image"><span><img src="img/img (18).jpg"></span></div>
+                <div class="image"><span><img src="img/img (19).jpg"></span></div>
+                <div class="image"><span><img src="img/img (20).jpg"></span></div>
+            </div>
+        </div>
+
+        <img src="img/circle-notch-solid.svg" class="small-icon4">
+        <img src="img/circle-notch-solid.svg" class="small-icon5">
+
+    </div>
+
+    <script>
+
+        var menubtn = document.getElementsByClassName("menu");
+    
+        for ( let i=0; i < menubtn.length; i++) {
+            menubtn[i].onclick = function ()
+            {
+                let currentMenu = document.getElementsByClassName("active-menu");
+                currentMenu[0].className = currentMenu[0].className.replace("active-menu", "");
+                this.className += " active-menu";
+            };
+        }
+    
+    </script>
+
+</body>
+</html>
